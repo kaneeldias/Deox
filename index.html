@@ -1,6 +1,50 @@
 <!DOCTYPE html>
-<head></head>
+<head>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
 <body>
-	dfdsfs
+	<div id = "app">
+		<div id = "title_page">
+			<div id ="title">deox</div>
+		</div>
+		<script>
+			var width = $(window).width();
+			var height = $(window).height();
+			$("#title").css("line-height", height+"px");
+			$("#title").css("font-size", (width/2.5)+"px");
+			setTimeout("switchTo('start.html')", 1000);
+			//var title_width = $("#title").width();
+			//$("#title").css("left", (width-title_width)/2)
+		</script>
+		<style>
+			#title{
+				position:absolute;
+				width:100%;
+				text-align:center;
+				vertical-align:middle;
+			}
+		</style>
+	</div>
+	<script>
+		var width = $(window).width();
+		console.log(width);
+		$("#app").css("width",width);
+		
+		function switchTo(url){
+			window.location.replace("start.html");
+			//$("#app").html("");
+		}
+	</script>
+	<style>
+		body{
+			color:white;
+		}
+		#app{
+			position:absolute;
+			left:0px;
+			min-height:100%;
+			background: linear-gradient(#BF0000,#9E0000);
+		}
+	</style>
 </body>
 </html>
